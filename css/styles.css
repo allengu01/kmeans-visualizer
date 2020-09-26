@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: #111d5e;
+}
+
+/** HEADER NAV BAR **/
+header {
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    height: auto;
+    position: relative;
+    color: #111d5e;
+    font-size: 24px;
+    box-shadow: 2px 2px 8px #111d5e;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    flex-direction: column;
+}
+
+.nav-brand {
+    font-size: 1.33em;
+    width: 100%;
+    margin-top: auto;
+}
+
+.nav-name {
+    text-decoration: none !important;
+    color: #111d5e;
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 2.5em;
+}
+
+.nav-categories {
+    display: flex;
+    line-height: 1.33em;
+    font-weight: 500;
+    height: 100%;
+    flex: 1;
+    margin-bottom: auto;
+    padding: 0;
+}
+
+.nav-item {
+    list-style-type: none;
+    flex-wrap: wrap;
+    flex: 1;
+    text-align: center;
+    height: 100%;
+}
+
+.nav-item a {
+    text-decoration: none !important;
+    color: #111d5e;
+}
+
+.nav-item a.active, .nav-item a:hover {
+    color: #6a0d83 !important;
+    cursor: pointer;
+}
+header hr {
+    margin-top: 0;
+    border-bottom: 2px solid #111d5e;
+    margin-bottom: 8px;
+}
+.col-sm-3, .col-sm-6, .col-sm-9, .col-sm-12, .col-md-3, .col-md-6, .col-md-9, .col-md-12 {
+    position: relative;
+    float: left;
+    min-height: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/** MEDIA QUERIES **/
+@media (max-width: 991px) {
+    .nav-brand {
+        padding-bottom: 15px;
+        border-bottom: 1px dotted #111d5e;
+        text-align: center;
+    }
+    .nav-logo {
+        position: relative;
+        top: 12px;
+        left: -5px;
+    }
+    .nav-name {
+        padding-left: 0;
+    }
+    .nav-categories {
+        flex-direction: column;
+        margin: 0;
+    }
+    .nav-item {
+        padding-top: 15px;
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-6 {
+        width: 50%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .nav-brand {
+        width: 600px !important;
+    }
+    .nav-bar {
+        flex-direction: row;
+    }
+    .nav-item:nth-child(1) {
+        border-left: 1px solid #111d5e;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+}
