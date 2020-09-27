@@ -79,10 +79,7 @@ def k_means(data, k, directory_name):
 def plot_rgb(data, centroids, i, file_path, end = False):
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111, projection='3d')
-    ax.set_title("Iteration: " + str(i))
-
-    ax.title.set_position([0.8, 0.2])
-    ax.title.set_size(20) 
+    ax.text2D(0.7, 0.3, "Iteration: " + str(i), transform=ax.transAxes, fontsize=16)
     
     ax.set_axis_off()
     ax.set_xticks([])
@@ -98,7 +95,7 @@ def plot_rgb(data, centroids, i, file_path, end = False):
 
     for r, g, b in centroids:
         ax.scatter3D(r, g, b, s=200, facecolor=(r/255, g/255, b/255), edgecolor="black", zorder=2)
-    fig.savefig(file_path, dpi=100, bbox='tight', pad_inches=0)
+    fig.savefig(file_path, dpi=100, pad_inches=0)
 
     return fig, ax   
 
