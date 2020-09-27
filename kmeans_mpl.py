@@ -141,4 +141,4 @@ def run_kmeans(data, k):
     filenames['rotate'] = rotate_files
     plt.close("all")
 
-    return filenames
+    return filenames, centroids_result
