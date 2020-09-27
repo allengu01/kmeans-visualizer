@@ -8,14 +8,16 @@ K-means clustering is an unsupervised machine learning algorithm that finds k cl
 #### 1) [Image Link](https://c4.wallpaperflare.com/wallpaper/778/821/245/minimalism-minimal-art-minimalist-airplane-wallpaper-preview.jpg) (k = 4)
   <p align="center">
     <img width="400" align="center" src="images/minimalist_landscape1.jpg">
-    <img width="500" align="center" src="examples/iterate_animation1.gif">
+    <img width="400" align="center" src="examples/iterate_animation1.gif">
     <img width="400" align="center" src="examples/rotate_animation1.gif">
+    <img width="400" align="center" src="examples/palette1.png">
   </p>
   
 #### 2) Starry Night (k = 3)
   <p align="center">
     <img width="400" align="center" src="images/starrynight.jpg">
-    <img width="500" align="center" src="examples/iterate_animation2.gif">
+    <img width="400" align="center" src="examples/iterate_animation2.gif">
     <img width="400" align="center" src="examples/rotate_animation2.gif">
+    <img width="400" align="center" src="examples/palette2.png">
   </p>
 
