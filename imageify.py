@@ -20,7 +20,7 @@ def reset():
 def main():
     reset()
 
-    image_file = 'minimalist_landscape1.jpg'
+    image_file = 'starrynight.jpg'
     img = cv2.imread('images/' + image_file) # change file here
     resized_img = cv2.resize(img, (40, 40), interpolation=cv2.INTER_AREA)
     img_r, img_g, img_b = split_rgb(resized_img)
@@ -28,7 +28,7 @@ def main():
     pixels = np.stack([flatten_img_r, flatten_img_g, flatten_img_b], axis=1)
 
     # K-MEANS
-    k = 4
+    k = 3
     print("Number of Pixels:", pixels.shape[0])
     kmeans_filenames, centroids = run_kmeans(pixels, k)
 
