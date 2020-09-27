@@ -20,7 +20,7 @@ def reset():
 def main():
     reset()
 
-    img = cv2.imread('images/minimalist_landscape4.jpeg') # change file here
+    img = cv2.imread('images/minimalist_landscape1.jpg') # change file here
     resized_img = cv2.resize(img, (40, 40), interpolation=cv2.INTER_AREA)
     #resized_img = cv2.resize(img, (60, 80))
     img_r, img_g, img_b = split_rgb(resized_img)

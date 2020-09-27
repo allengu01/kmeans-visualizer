@@ -88,7 +88,9 @@ def plot_rgb(data, centroids, i, file_path, end = False):
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_zticks([])
-
+    plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+    plt.margins(0, 0, 0)
+    
     r, g, b = data[:, 0], data[:, 1], data[:, 2]
     point_opacity = 0.7
     point_edge_color = np.hstack([data/255, np.ones([data.shape[0], 1]) * point_opacity]) # sets color of each point to the pixel value with point_opacity
