@@ -81,7 +81,6 @@ def plot_rgb(data, centroids, i, file_path, end = False):
     ax = fig.add_subplot(111, projection='3d')
     ax.set_title("Iteration: " + str(i))
 
-    ax.xaxis.labelpad, ax.yaxis.labelpad, ax.zaxis.labelpad = 10, 10, 10
     ax.title.set_position([0.85, 1])
     ax.title.set_size(10) 
 
@@ -97,22 +96,20 @@ def plot_rgb(data, centroids, i, file_path, end = False):
 
     for r, g, b in centroids:
         ax.scatter3D(r, g, b, s=200, facecolor=(r/255, g/255, b/255), edgecolor="black", zorder=2)
-    fig.savefig(file_path, dpi=100)
+    fig.savefig(file_path, dpi=100, bbox='tight', pad_inches=0)
 
     return fig, ax   
 
 def rotate(data, centroids, directory_name):
     fig = plt.figure(figsize=(8, 6))
     ax = fig.add_subplot(111, projection='3d')
-    
-    ax.xaxis.labelpad, ax.yaxis.labelpad, ax.zaxis.labelpad = 10, 10, 10
-    ax.title.set_position([0.85, 1])
-    ax.title.set_size(10) 
 
     ax.set_axis_off()
     ax.set_xticks([])
     ax.set_yticks([])
     ax.set_zticks([])
+    plt.subplots_adjust(top = 1, bottom = 0, right = 1, left = 0, hspace = 0, wspace = 0)
+    plt.margins(0, 0, 0)
 
     r, g, b = data[:, 0], data[:, 1], data[:, 2]
     point_opacity = 0.7
@@ -124,11 +121,9 @@ def rotate(data, centroids, directory_name):
     
     rotate_filenames = []
     for angle in range(0, 360, 3):
-        ax.set_title("Iteration: Final")
-
         ax.view_init(elev=30, azim=angle)
         cur_filename = "rotate_animation" + str(angle) + ".png"
-        fig.savefig(directory_name + cur_filename, dpi=100)
+        fig.savefig(directory_name + cur_filename, dpi=100, pad_inches=0)
         rotate_filenames.append(cur_filename)
     return rotate_filenames
     

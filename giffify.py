@@ -20,15 +20,17 @@ def reset():
 def main():
     reset()
 
-    img = cv2.imread('images/minimalist_landscape1.jpg') # change file here
+    img = cv2.imread('images/minimalist_landscape4.jpeg') # change file here
     resized_img = cv2.resize(img, (40, 40), interpolation=cv2.INTER_AREA)
     #resized_img = cv2.resize(img, (60, 80))
     img_r, img_g, img_b = split_rgb(resized_img)
     flatten_img_r, flatten_img_g, flatten_img_b = list(map(flatten, [img_r, img_g, img_b]))
     pixels = np.stack([flatten_img_r, flatten_img_g, flatten_img_b], axis=1)
 
-    print(pixels.shape[0])
-    kmeans_filenames = run_kmeans(pixels, 4)
+    # K-MEANS
+    k = 4
+    print("Number of Pixels:", pixels.shape[0])
+    kmeans_filenames = run_kmeans(pixels, k)
 
     # ITERATION ANIMATION
     iterate_animation_dir = 'figs/'
