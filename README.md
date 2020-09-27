@@ -6,3 +6,6 @@ K-means clustering is an unsupervised machine learning algorithm that finds k cl
 
 ## Examples
 <img width="300" src="images/minimalist_landscape1.jpg">
+<img width="300" src="examples/iterate_animation.gif">
+<img width="300" src="examples/rotate_animation.gif">
+
