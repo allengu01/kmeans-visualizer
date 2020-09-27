@@ -9,5 +9,4 @@ K-means clustering is an unsupervised machine learning algorithm that finds k cl
   <img width="400" align="center" src="images/minimalist_landscape1.jpg">
   <img width="500" align="center" src="examples/rotate_animation.gif">
   <img align="center" src="examples/iterate_animation.gif">
-
 </p>
