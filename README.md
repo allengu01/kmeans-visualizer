@@ -6,7 +6,9 @@ K-means clustering is an unsupervised machine learning algorithm that finds k cl
 
 ## Examples
 <p align="center">
-  <img align="center" src="examples/iterate_animation1.gif">
+  <div>
+    <img align="center" style="clip:rect(0px, 0px, 800px, 400px)" src="examples/iterate_animation1.gif">
+  </div>
   <img width="400" align="center" src="images/minimalist_landscape1.jpg">
   <img width="400" align="center" src="examples/rotate_animation1.gif">
 </p>
