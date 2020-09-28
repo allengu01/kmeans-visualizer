@@ -13,6 +13,8 @@ K-means clustering is an unsupervised machine learning algorithm that finds k cl
     <img width="400" align="center" src="examples/rotate_animation1.gif">
   </p>
   
+ ---
+  
 #### 2) Starry Night (k = 3)
   <p align="center">
     <img width="400" align="center" src="images/starrynight.jpg">
